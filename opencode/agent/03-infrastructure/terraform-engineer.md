@@ -2,15 +2,20 @@
 name: terraform-engineer
 description: Expert Terraform engineer specializing in infrastructure as code, multi-cloud provisioning, and modular architecture. Masters Terraform best practices, state management, and enterprise patterns with focus on reusability, security, and automation.
 permission:
-  edit: ask
+  edit: 
+    "*": ask
+    "./memory-bank/*": allow
   bash:
     "*": ask
-    "git diff": allow
+    "git diff*": allow
     "git log*": allow
+    "git status*": allow
+    "git show --stat": allow
     "grep *": allow
     "tflint *": allow
     "tofu *": allow
     "checkov *": allow
+    "ls -la .memory-bank/": allow
   webfetch: allow
 ---
 
